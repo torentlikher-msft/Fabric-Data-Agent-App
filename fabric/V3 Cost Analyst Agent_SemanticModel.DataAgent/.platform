@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "V3 Cost Analyst Agent_SemanticModel"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "58aac178-3e31-ad91-4a04-54ac8cbcfa63"
+  }
+}

@@ -1,0 +1,41 @@
+table 'cost forecast'
+	lineageTag: 0cfcc3a4-2834-4f63-a2a4-3132679dd870
+
+	measure TotalCostForecast =
+			CALCULATE(
+			    SUM('cost forecast'[total_charge_forecast])
+			) * 5
+		lineageTag: 6d7b84a1-0491-41bb-a485-93f26b86b4d5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column billable_period_end_date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 8e7eb012-d30c-437f-a0df-ab6b7d3062e6
+		summarizeBy: none
+		sourceColumn: billable_period_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column total_charge_forecast
+		dataType: double
+		lineageTag: be8a8368-0417-469b-af72-7f981b37efbc
+		sourceColumn: total_charge_forecast
+
+	partition cost = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("<gold lakehouse_url>", "healthcare1_msft_gold_cma"),
+				    dbo_cost = Source{[Schema="dbo",Item="cost_forecast"]}[Data]
+				in
+				    dbo_cost
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

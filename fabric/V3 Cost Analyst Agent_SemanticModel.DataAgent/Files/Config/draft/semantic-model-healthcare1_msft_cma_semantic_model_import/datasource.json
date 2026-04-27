@@ -1,0 +1,2813 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "a5f579d3-0563-a7a2-4da5-cb6386f1be19",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "healthcare1_msft_cma_semantic_model_import",
+  "type": "semantic_model",
+  "userDescription": null,
+  "metadata": {
+    "csdl_relationships": "[{\"FromTable\":\"cost\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"cost\",\"FromColumn\":\"billable_period_end_date\",\"ToTable\":\"Date\",\"ToColumn\":\"Date2\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"condition_occurrence\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"location\",\"FromColumn\":\"zip\",\"ToTable\":\"patient_location_zip\",\"ToColumn\":\"zip\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"person\",\"FromColumn\":\"location_id\",\"ToTable\":\"location\",\"ToColumn\":\"location_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"visit_occurrence\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"procedure_occurrence\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"measurement\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"care_plan\",\"FromColumn\":\"person_id\",\"ToTable\":\"person\",\"ToColumn\":\"person_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"care_plan_activities\",\"FromColumn\":\"care_plan_id\",\"ToTable\":\"care_plan\",\"ToColumn\":\"care_plan_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"care_plan_addresses\",\"FromColumn\":\"care_plan_id\",\"ToTable\":\"care_plan\",\"ToColumn\":\"care_plan_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"care_plan_goal\",\"FromColumn\":\"care_plan_id\",\"ToTable\":\"care_plan\",\"ToColumn\":\"care_plan_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"social_determinant\",\"FromColumn\":\"location_value\",\"ToTable\":\"sdoh_fips\",\"ToColumn\":\"fips_code\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"social_determinant\",\"FromColumn\":\"name\",\"ToTable\":\"sdoh_datasetmetadata\",\"ToColumn\":\"sdoh_datasetmetadata_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"social_determinant\",\"FromColumn\":\"category_id\",\"ToTable\":\"sdoh_category\",\"ToColumn\":\"subcategory_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"social_determinant\",\"FromColumn\":\"unit_of_measure_id\",\"ToTable\":\"sdoh_unitofmeasure\",\"ToColumn\":\"unit_of_measure_id\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"zip_to_fips_mapping\",\"FromColumn\":\"zip\",\"ToTable\":\"patient_location_zip\",\"ToColumn\":\"zip\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"zip_to_fips_mapping\",\"FromColumn\":\"countyFips\",\"ToTable\":\"sdoh_fips\",\"ToColumn\":\"fips_code\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"Date\",\"FromColumn\":\"Date2\",\"ToTable\":\"LocalDateTable_d4d07d2c_215e_4378_8717_2b08920c2563\",\"ToColumn\":\"Date\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"Date\",\"FromColumn\":\"Start_of_Month\",\"ToTable\":\"LocalDateTable_1c2e2065_9762_43bf_a82a_848879753a23\",\"ToColumn\":\"Date\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"},{\"FromTable\":\"cost_forecast\",\"FromColumn\":\"billable_period_end_date\",\"ToTable\":\"Date\",\"ToColumn\":\"Date2\",\"IsActive\":true,\"IsBidirectional\":false,\"Cardinality\":\"ManyToOne\"}]"
+  },
+  "elements": [
+    {
+      "id": "9bab279e-6090-4ecb-b598-44ef79c3233e",
+      "is_selected": false,
+      "display_name": "care_plan",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "b85c140f-1fbd-4bbd-8207-15aacc0acab9",
+          "is_selected": true,
+          "display_name": "care_plan_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a16aa93d-d2a4-472a-b371-9d8a42e38f7d",
+          "is_selected": true,
+          "display_name": "category_code",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "dbd295e1-5b44-4585-8173-968c14232ead",
+          "is_selected": true,
+          "display_name": "category_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9629a33b-e450-474b-b3e4-7770bb39191e",
+          "is_selected": true,
+          "display_name": "description",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4377d1f8-aa8e-4544-9672-80e2d9d14d59",
+          "is_selected": true,
+          "display_name": "period_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3d9ab9fa-d951-4e62-83a5-89270ee893c2",
+          "is_selected": true,
+          "display_name": "period_end_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bee7f1a4-7651-4a61-a8b2-3acd3cdbe595",
+          "is_selected": true,
+          "display_name": "period_end_date_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5cc88433-d00f-4797-af22-b3f0623052b1",
+          "is_selected": true,
+          "display_name": "period_end_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e779bd9f-ebcf-4bf9-a39b-9e1d0c09e14e",
+          "is_selected": true,
+          "display_name": "period_start_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6e9cee91-67fe-440d-b551-48764bc8e507",
+          "is_selected": true,
+          "display_name": "period_start_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bac491d0-224e-4b1c-a1e0-cce774375f72",
+          "is_selected": true,
+          "display_name": "period_start_date_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "49dadddc-11eb-46a1-a26d-f27d5062ff44",
+          "is_selected": true,
+          "display_name": "period_start_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5f19c0e2-bfe9-46c2-9594-578da83937e5",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "325f44e7-b707-4340-9388-778f9afc74f2",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "44d6cc6b-5b9c-412b-8966-2ebd50123656",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a6e8320e-f72b-41ce-b6f9-4d8f620b6f85",
+          "is_selected": true,
+          "display_name": "status",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c9695c1c-e7da-4376-93d0-b030fef528dd",
+          "is_selected": true,
+          "display_name": "title",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ab643da7-54be-446b-b40a-ec03c4cf4677",
+      "is_selected": false,
+      "display_name": "care_plan_activities",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "747b974b-0320-47fa-a16f-675515bc3220",
+          "is_selected": true,
+          "display_name": "care_plan_activity_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f9fce7fe-8b9e-4920-aef1-c6739f65e0f8",
+          "is_selected": true,
+          "display_name": "care_plan_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "35cd5d75-c2ac-4559-a1c2-a9a3ef8b4af1",
+          "is_selected": true,
+          "display_name": "daily_amount_value",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "43b14f9b-f9c0-4891-84fc-f5574def0ca0",
+          "is_selected": true,
+          "display_name": "kind",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cbd5bd63-83c0-4424-8b1f-a11861c4c0fc",
+          "is_selected": true,
+          "display_name": "quantity_value",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8cc20b12-9a18-4fa8-9cc3-63183f48ca05",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5f96e6e1-e687-477c-9a4e-c7cf834a7474",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "22233b9a-fcff-462d-80ed-244f349947ae",
+          "is_selected": true,
+          "display_name": "status",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ef0319e3-cf79-4149-bfa5-76241d223100",
+          "is_selected": true,
+          "display_name": "type_code",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2604359b-70d5-40db-b2c3-16d0eae39dfc",
+          "is_selected": true,
+          "display_name": "type_text",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "e968f3cb-13b2-483c-80cb-030b2867cbd5",
+      "is_selected": false,
+      "display_name": "care_plan_addresses",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "ed2c805d-3639-4dfd-bf98-33105f8b87e7",
+          "is_selected": true,
+          "display_name": "care_plan_addresses_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7652cac9-2d80-4577-92c3-56af7d245307",
+          "is_selected": true,
+          "display_name": "care_plan_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e9cdbd2a-b2dc-49dd-9540-6e27ce78642a",
+          "is_selected": true,
+          "display_name": "condition_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ec13d650-a933-4190-a71a-080e7856770b",
+          "is_selected": true,
+          "display_name": "condition_idOrig",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a84cebe3-f917-47e6-a72e-3bfd539a3b9f",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c8b1e213-8597-4f6c-8827-d3f01ba5b90d",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "bdfb7e2c-9bbe-4bd7-b928-9f1a16e058af",
+      "is_selected": false,
+      "display_name": "care_plan_goal",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "3c1cca8f-315b-41d1-8ad2-7393d762ba0d",
+          "is_selected": true,
+          "display_name": "care_plan_goal_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a3ddb3df-e84f-4383-83a7-df1c2868ec3a",
+          "is_selected": true,
+          "display_name": "care_plan_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a8c18e4d-c906-4e1b-b400-5446e225b32f",
+          "is_selected": true,
+          "display_name": "goal_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bf2651b1-ba0b-4338-b88d-d126fc3e037f",
+          "is_selected": true,
+          "display_name": "goal_idOrig",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "b0668766-4a81-4bac-a7b4-2240b57bd7a4",
+      "is_selected": true,
+      "display_name": "condition_occurrence",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "3e15cc66-6d98-4705-837f-fbb9d437df98",
+          "is_selected": true,
+          "display_name": "condition_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ea12e4d0-0a09-47cd-bb24-119881e96aa4",
+          "is_selected": true,
+          "display_name": "condition_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f494a012-2067-4621-8c51-8fee1833a11d",
+          "is_selected": true,
+          "display_name": "condition_end_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bb8559b2-1a39-49ce-9c5d-55db4c964371",
+          "is_selected": true,
+          "display_name": "condition_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e51ed5e9-f7c6-4678-adfe-15411b22035b",
+          "is_selected": true,
+          "display_name": "condition_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "32d4e6d2-6049-4eab-ab19-3056f6b694e0",
+          "is_selected": true,
+          "display_name": "condition_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "97688c41-cee4-49d3-ab0e-11f97c93f092",
+          "is_selected": true,
+          "display_name": "condition_start_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7e6e9622-b41b-45c5-97ba-3882e83d655c",
+          "is_selected": true,
+          "display_name": "condition_start_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3af20bd0-b4f2-446a-a2da-b0f339550c17",
+          "is_selected": true,
+          "display_name": "condition_status_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6930a878-0858-4272-bdfc-1eae10248a13",
+          "is_selected": true,
+          "display_name": "condition_status_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7c9710ff-27b2-4db8-b13d-0e42138bbd55",
+          "is_selected": true,
+          "display_name": "condition_text_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7375736c-cf10-4639-8449-5fa7b372fa19",
+          "is_selected": true,
+          "display_name": "condition_type_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "33162db0-a9f4-4794-bd02-8d9fad31d9c7",
+          "is_selected": true,
+          "display_name": "count_diabetic",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e40c0401-60bd-40b1-888b-eeb691c82bb5",
+          "is_selected": true,
+          "display_name": "count_non_diabetic",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "561453a2-1c33-4c93-8f83-31859afc08e7",
+          "is_selected": true,
+          "display_name": "count_type_I",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f54d1364-a5a0-4f9a-9e59-e8b0021142c8",
+          "is_selected": true,
+          "display_name": "count_type_II",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0905635b-f3db-4a4f-b2ac-d6fd4e64258e",
+          "is_selected": true,
+          "display_name": "DiabeticStatus",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d3602b6a-67b9-45cf-a2d8-dc2dc8f08765",
+          "is_selected": true,
+          "display_name": "PatientCountByCondition",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "95129365-6d77-4474-aa2b-be172f7e912a",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8bd27587-b37d-46ff-8882-9446732a8a8c",
+          "is_selected": true,
+          "display_name": "provider_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f8bb8f8d-5fb7-4af0-9433-cf69548258b1",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7ed64e8a-bc05-4466-8dfc-fbd00f113299",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "697daad2-f41a-452c-9eba-7b819bf2437e",
+          "is_selected": true,
+          "display_name": "stop_reason",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ca6f0030-2ae2-4cdb-901f-a1cfbb7325e0",
+          "is_selected": true,
+          "display_name": "TypeOfDiabetes",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "770c7f1e-a5d1-4565-a5bf-82845003be55",
+          "is_selected": true,
+          "display_name": "visit_detail_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9f04de2f-96ef-4a18-9523-5f4be8892abf",
+          "is_selected": true,
+          "display_name": "visit_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7c1f8a16-f6d3-460d-a947-c575d4eafcd3",
+      "is_selected": true,
+      "display_name": "cost",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "f42f0f2a-7ebd-4496-b010-c4f690940c72",
+          "is_selected": true,
+          "display_name": "amount_allowed",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "00cea2ff-f303-4e5a-8f9a-af03fcb7932e",
+          "is_selected": true,
+          "display_name": "bill_end_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "94c99ae6-6fa4-43bf-8ddc-ba666ae7bace",
+          "is_selected": true,
+          "display_name": "bill_end_date_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "158e2921-4362-49dc-bca6-f34ace813da0",
+          "is_selected": true,
+          "display_name": "bill_start_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8e7eb012-d30c-437f-a0df-ab6b7d3062e6",
+          "is_selected": true,
+          "display_name": "billable_period_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "aa907720-8d2f-46cb-8872-f53a9cc8a50b",
+          "is_selected": true,
+          "display_name": "billable_period_start_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3a6befcb-48f1-4e68-ac8b-0b3b9ed7849d",
+          "is_selected": true,
+          "display_name": "cost_domain_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a5147166-d106-4cec-a277-71d863bc23ba",
+          "is_selected": true,
+          "display_name": "cost_event_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fb5ca3b2-ebbb-4ffa-a986-436c64952905",
+          "is_selected": true,
+          "display_name": "cost_gender_female",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bc04aa66-e948-4268-a991-323aa6b71dac",
+          "is_selected": true,
+          "display_name": "cost_gender_male",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "29f34903-44fd-4a73-a692-7128c326ee09",
+          "is_selected": true,
+          "display_name": "cost_gender_unknown",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7638f6b0-19ce-450a-8d92-95a33b1dbf75",
+          "is_selected": true,
+          "display_name": "cost_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5e86ce8d-5f37-4a26-9141-92980b32f90f",
+          "is_selected": true,
+          "display_name": "cost_type_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d068e2e6-81da-4a91-8dde-5bbe09c067dd",
+          "is_selected": true,
+          "display_name": "currency_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6c2ff919-e760-4f24-abf4-ae01586b114a",
+          "is_selected": true,
+          "display_name": "drg_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3bae08ed-0808-406c-920b-88c157a05361",
+          "is_selected": true,
+          "display_name": "drg_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "83041a10-147c-4b4a-9436-b631cec454eb",
+          "is_selected": true,
+          "display_name": "paid_by_patient",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0d3947ba-f29c-4b50-90d3-08276a135056",
+          "is_selected": true,
+          "display_name": "paid_by_payer",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3e175c07-657e-49d4-b71c-512a23b1bb0a",
+          "is_selected": true,
+          "display_name": "paid_by_primary",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "732d5dd5-4d93-47f3-a6f8-c66688126495",
+          "is_selected": true,
+          "display_name": "paid_dispensing_fee",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3a13dca4-d8a2-4c47-815d-ed9dec801b29",
+          "is_selected": true,
+          "display_name": "paid_ingredient_cost",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ae7e850b-dce3-4d68-8e1f-ff07120fdd5b",
+          "is_selected": true,
+          "display_name": "paid_patient_coinsurance",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "538033b4-1489-4be4-8c04-9ca1bc7b64d4",
+          "is_selected": true,
+          "display_name": "paid_patient_copay",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8d4ac6f4-8507-45c4-89ad-36da4caef31c",
+          "is_selected": true,
+          "display_name": "paid_patient_deductible",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "52d8a960-9543-4351-89b0-35e14a905942",
+          "is_selected": true,
+          "display_name": "payer_plan_period_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8383a48d-07da-4260-8e51-f1c7e8d6cb08",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "981e5914-cff9-4cc0-955f-cd91f870f7bd",
+          "is_selected": true,
+          "display_name": "revenue_code_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3e86cab1-4374-4cbc-b85b-a3155ee013f9",
+          "is_selected": true,
+          "display_name": "revenue_code_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2920f129-4894-477f-b39a-de5cee89be08",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5850b1c2-74b9-4f00-85bb-41f70a1c6b3b",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5049947e-0112-4e99-b2d5-e602cad95d88",
+          "is_selected": true,
+          "display_name": "total_charge",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5cef399e-bcfa-4965-8030-ba5e45446415",
+          "is_selected": true,
+          "display_name": "total_cost",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a2ef9e7c-2680-4b3e-81a0-2fb55710f59d",
+          "is_selected": true,
+          "display_name": "total_paid",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6d7b84a1-0491-41bb-a485-93f26b86b4d5",
+          "is_selected": true,
+          "display_name": "TotalCostByCondition",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "0cfcc3a4-2834-4f63-a2a4-3132679dd870",
+      "is_selected": false,
+      "display_name": "cost forecast",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "8e7eb012-d30c-437f-a0df-ab6b7d3062e6",
+          "is_selected": true,
+          "display_name": "billable_period_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "be8a8368-0417-469b-af72-7f981b37efbc",
+          "is_selected": true,
+          "display_name": "total_charge_forecast",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6d7b84a1-0491-41bb-a485-93f26b86b4d5",
+          "is_selected": true,
+          "display_name": "TotalCostForecast",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "5af4f547-ce39-484e-a752-ab71ead8895f",
+      "is_selected": true,
+      "display_name": "Date",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "311de371-9652-4b87-bb66-fc16fbcd9cf2",
+          "is_selected": true,
+          "display_name": "Date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9eef10b6-f663-423b-b04b-1174bcb08eb5",
+          "is_selected": true,
+          "display_name": "DATE_KEY",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3dcc0a24-281f-457d-a4af-74e9fd9eca2c",
+          "is_selected": true,
+          "display_name": "Day Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a796b4af-745e-4ae4-88c6-5f1a5c214d6d",
+          "is_selected": true,
+          "display_name": "Day of Month",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cea332d6-81e8-459f-9cce-094b44667483",
+          "is_selected": true,
+          "display_name": "Day of Week",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "49586e6c-84d7-42b9-8744-d4ae228bc187",
+          "is_selected": true,
+          "display_name": "Day Short",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "93cb8650-9b55-4a24-ab06-c62e28113b84",
+          "is_selected": true,
+          "display_name": "Fiscal Quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "35e32088-88fe-464c-94b7-ac36f72d1576",
+          "is_selected": true,
+          "display_name": "Fiscal Year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fe6f7a91-3c5f-409c-9eec-6391643990b6",
+          "is_selected": true,
+          "display_name": "Is Weekend",
+          "type": "semantic_model.column",
+          "data_type": "Boolean",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "25ad0377-8694-43b9-9f8d-ffa3689ee425",
+          "is_selected": true,
+          "display_name": "Month Name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8e8008dc-3f0e-4c39-aa78-898d8f21af0c",
+          "is_selected": true,
+          "display_name": "Month Number",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "93ee13f8-f0be-4d36-b3fd-9983ac3c1faa",
+          "is_selected": true,
+          "display_name": "Month Short",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "10d82271-cb96-4e70-bdea-0936b4a13fb8",
+          "is_selected": true,
+          "display_name": "Quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cc4f30cc-6bd2-48d1-bbcb-1274b70a5666",
+          "is_selected": true,
+          "display_name": "Quarter Number",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7cd98db8-fb25-4d2c-b2d5-87f4f394e938",
+          "is_selected": true,
+          "display_name": "Start of Month",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c2124fa1-0830-4e46-9920-0bcbefe2f8b8",
+          "is_selected": true,
+          "display_name": "Week of Year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9860e166-89c2-4825-a8ea-cc78fb68ef7f",
+          "is_selected": true,
+          "display_name": "Year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "447fe846-5aa5-4c55-8370-4467cf83ff43",
+          "is_selected": true,
+          "display_name": "Year-Month",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "01904b9c-4f22-41f3-a311-5935ea7a5548",
+          "is_selected": true,
+          "display_name": "Year-Quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7b2fb6a9-25e2-46fd-a512-a05ca8e719cd",
+      "is_selected": true,
+      "display_name": "location",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "d433834b-7e85-43bc-a195-352d9b04f55c",
+          "is_selected": true,
+          "display_name": "address_1",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "af2d3993-4f08-4934-87e6-9e3db12be4ea",
+          "is_selected": true,
+          "display_name": "address_2",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d34f2663-666a-4820-b87d-45a344312343",
+          "is_selected": true,
+          "display_name": "city",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0acfdd61-9df2-45c8-b9db-022ab0560918",
+          "is_selected": true,
+          "display_name": "country",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ba70bfb2-44a4-4151-bb0a-a03f7d39e1ef",
+          "is_selected": true,
+          "display_name": "country_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e5015c85-2a14-4f16-b414-e0da336b38e4",
+          "is_selected": true,
+          "display_name": "country_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f4e196f2-09c6-479d-958b-96da1d0c93fa",
+          "is_selected": true,
+          "display_name": "county",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "565eff7d-c8aa-4f8d-9e10-81da99c4972f",
+          "is_selected": true,
+          "display_name": "latitude",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6f540793-f1f4-4657-b755-804ccf62d69b",
+          "is_selected": true,
+          "display_name": "location_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "47688d82-d781-4b37-a44a-ed42a761110c",
+          "is_selected": true,
+          "display_name": "location_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ba4b8a34-62af-42f6-871a-b97a962372eb",
+          "is_selected": true,
+          "display_name": "longitude",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6870c61d-094d-4631-972e-b14eab51190a",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "341d508c-d2b8-45ea-914b-54db5946c35b",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4968b59f-604f-43e9-89f9-db9b6dd48e2c",
+          "is_selected": true,
+          "display_name": "state",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2aef7bdd-c9e2-4c3d-8c12-e840e8632e98",
+          "is_selected": true,
+          "display_name": "zip",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "daa7cf66-f9e9-4542-a915-dabc475f4f49",
+      "is_selected": false,
+      "display_name": "measurement",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "99dbb97b-9a37-405a-96e5-20c7ad485b89",
+          "is_selected": true,
+          "display_name": "count_high_Hemoglobin_A1c",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3255d5ba-d60a-401e-b5aa-44a82ac6a561",
+          "is_selected": true,
+          "display_name": "count_low_Hemoglobin_A1c",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d8973968-7c3b-43be-86c4-4bd318023915",
+          "is_selected": true,
+          "display_name": "meas_event_field_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d0f780a0-5438-4ea1-9efb-0b30dce0d34c",
+          "is_selected": true,
+          "display_name": "measurement_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6a3cd753-81cd-418a-a489-9adf8390ad28",
+          "is_selected": true,
+          "display_name": "measurement_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b2ce92c8-64d5-48da-a44a-9ffc1c562b77",
+          "is_selected": true,
+          "display_name": "measurement_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ecec806a-b751-4339-a518-ff48088285a3",
+          "is_selected": true,
+          "display_name": "measurement_event_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4c54cdf8-0f2b-4851-b2e8-c2f2fc250715",
+          "is_selected": true,
+          "display_name": "measurement_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "476df7a4-184d-4c57-b94e-404c526b9c17",
+          "is_selected": true,
+          "display_name": "measurement_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2f509c47-4904-403b-a11c-9b0f25c57c84",
+          "is_selected": true,
+          "display_name": "measurement_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b02b9d02-7133-40a3-94b5-be2d313512e7",
+          "is_selected": true,
+          "display_name": "measurement_text_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "de587bd0-681e-4d22-8763-507658da47ad",
+          "is_selected": true,
+          "display_name": "measurement_time",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "89b26ac0-9b46-496c-b859-79e0ebd715b6",
+          "is_selected": true,
+          "display_name": "measurement_type_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9406df2c-a614-407c-b123-9e4fa5ae4660",
+          "is_selected": true,
+          "display_name": "msftModifiedDatetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "47447c9c-5928-40f2-9abb-e3264ddbc724",
+          "is_selected": true,
+          "display_name": "msftSourceRecordId",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b55e9186-dd4c-47b8-a52e-c094b5422438",
+          "is_selected": true,
+          "display_name": "msftSourceTableName",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "be4b8b39-66b8-482d-961d-a1ce9a551829",
+          "is_selected": true,
+          "display_name": "operator_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b46c9c27-4b63-4f5b-8644-e2060543cedb",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4986ae91-3e5e-4404-bd40-2a2b1fb08dbd",
+          "is_selected": true,
+          "display_name": "provider_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2cbf7b5d-f7af-454f-b72e-09f86309de4e",
+          "is_selected": true,
+          "display_name": "range_high",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2e425b1b-b837-4ec4-9b39-15048bd1f9bb",
+          "is_selected": true,
+          "display_name": "range_low",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4df6e1e5-fbce-4aac-9192-1548dea2eb83",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "30a24a50-522e-4b86-b0a5-dea7e2c79997",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "46f2479b-20e6-4fcb-a11b-3ae1cf166cb1",
+          "is_selected": true,
+          "display_name": "unit_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0e5910ed-635f-4668-8a2e-2864b851476c",
+          "is_selected": true,
+          "display_name": "unit_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "92a142b0-a114-492b-9896-09672e17de98",
+          "is_selected": true,
+          "display_name": "unit_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0d0744bf-f46c-4310-906c-c138b7b13106",
+          "is_selected": true,
+          "display_name": "value_as_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ae340b64-c39d-42e0-bc6f-0523791bc6c2",
+          "is_selected": true,
+          "display_name": "value_as_number",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8372a85d-0a5d-40f6-9f17-0dc523d09b75",
+          "is_selected": true,
+          "display_name": "value_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0df7a464-070b-41b7-acc4-09180ce39131",
+          "is_selected": true,
+          "display_name": "visit_detail_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bf2a822b-b1eb-4719-8a9a-e7efb08f96e2",
+          "is_selected": true,
+          "display_name": "visit_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "47bf0c03-4cd1-476f-892b-3f418209a126",
+      "is_selected": true,
+      "display_name": "patient_location_zip",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "1308da37-d2f9-472b-a4f5-896b91498e60",
+          "is_selected": true,
+          "display_name": "city",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "22b34bbc-d4b5-4f1a-96a5-b2f62bdbf5ec",
+          "is_selected": true,
+          "display_name": "country",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "17f828bf-1ff2-4768-aeaa-0abf2a528603",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f06c7e6e-a77d-49eb-8f20-325aa5fba35b",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c6dd2bf9-adb1-4283-aa54-b53233af0a3c",
+          "is_selected": true,
+          "display_name": "state",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "75d2d26b-a4b1-46a0-9fbb-efa802414d4b",
+          "is_selected": true,
+          "display_name": "zip",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "80c69ce0-4629-4b58-b672-d3e43a98e850",
+      "is_selected": true,
+      "display_name": "person",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "4058af01-e36b-45eb-8c1b-25dd732a2ab0",
+          "is_selected": true,
+          "display_name": "AgeGroup",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ccd3e823-34ac-46fe-8d8e-cf701c50e3cf",
+          "is_selected": true,
+          "display_name": "birth_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6238cecc-7de4-4762-b763-2e3ed7db5658",
+          "is_selected": true,
+          "display_name": "care_site_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "67865166-0308-4b9d-8001-cce5907d5ed0",
+          "is_selected": true,
+          "display_name": "count_gender_female",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "eeb17f6b-cf38-4b89-881b-fe6d3cc6cced",
+          "is_selected": true,
+          "display_name": "count_gender_male",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "78f6baf1-c018-405d-9dca-5624e0a3f883",
+          "is_selected": true,
+          "display_name": "count_gender_unkown",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "88abb25d-c224-484e-8c5f-70ea72426b22",
+          "is_selected": true,
+          "display_name": "day_of_birth",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fbfd6be4-2f74-4236-bd5a-6a77d629ba86",
+          "is_selected": true,
+          "display_name": "ethnicity_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5151bc1a-8c08-41b9-bd68-8e03447f2540",
+          "is_selected": true,
+          "display_name": "ethnicity_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3b09dd12-6f2a-47a9-848d-fc836c2e51f1",
+          "is_selected": true,
+          "display_name": "ethnicity_source_display_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0f132009-e9ee-49e7-adcb-263ed0b89237",
+          "is_selected": true,
+          "display_name": "ethnicity_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "be94db92-cf87-4adc-8d20-c66aab2212ba",
+          "is_selected": true,
+          "display_name": "gender_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9cdadfd0-23d7-487c-ab82-a0a89a78664f",
+          "is_selected": true,
+          "display_name": "gender_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f622da2d-e14d-4d22-a202-9bedd6bd76e5",
+          "is_selected": true,
+          "display_name": "location_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "18bcf16f-f651-4587-8264-3b51f3143305",
+          "is_selected": true,
+          "display_name": "month_of_birth",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ac322231-b1e9-428f-bbef-eac42c6cc010",
+          "is_selected": true,
+          "display_name": "PatientsByAgeGroup",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "39ce21a8-7135-4e3e-b0ad-6de23f3c906c",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4e0614cb-7fa7-4399-a7c6-479a84c71b1e",
+          "is_selected": true,
+          "display_name": "person_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "022df35e-c442-4c4e-887d-c06272e6f826",
+          "is_selected": true,
+          "display_name": "provider_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "53a45a61-b742-496b-a79a-34dde2b8a248",
+          "is_selected": true,
+          "display_name": "race_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "716256d1-a602-4e5b-ab5a-1d184b6f2d92",
+          "is_selected": true,
+          "display_name": "race_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fb604602-b516-4c0d-a31c-ed07e1168cb3",
+          "is_selected": true,
+          "display_name": "race_source_display_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "49314698-3238-441a-b6da-a0fdc6153972",
+          "is_selected": true,
+          "display_name": "race_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2168a859-f2c1-4bef-b65a-e75bf361aea7",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9beba4b7-4ea6-471a-a963-6f21a5d3d50b",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7f0914dd-dc8d-4eec-b25e-d37ccc6e6059",
+          "is_selected": true,
+          "display_name": "year_of_birth",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "fa11d662-b37f-449c-bfe9-798d4e5ea854",
+      "is_selected": false,
+      "display_name": "procedure_occurrence",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "7fbde4fe-8866-41d1-a9e4-237448deebc4",
+          "is_selected": true,
+          "display_name": "modifier_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3718b456-bd10-4f90-8df5-28adcfc19dbf",
+          "is_selected": true,
+          "display_name": "modifier_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "aa987201-b210-4c38-8687-9cd0b13d33a6",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "45bb3336-ee90-4a29-bd65-ef7ea84a1c6d",
+          "is_selected": true,
+          "display_name": "procedure_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d967be5a-248f-47b0-9301-23f534cfea40",
+          "is_selected": true,
+          "display_name": "procedure_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e5a7bee0-d7e9-4204-9edc-5d3595df3c48",
+          "is_selected": true,
+          "display_name": "procedure_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "07ebf943-5aad-4a8f-a6e6-c56d1e062578",
+          "is_selected": true,
+          "display_name": "procedure_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2116de66-d41b-421f-ab3e-5605449c75a6",
+          "is_selected": true,
+          "display_name": "procedure_end_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6331f673-dc4d-499c-9fa7-78d55a5bbf52",
+          "is_selected": true,
+          "display_name": "procedure_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "57076418-ee63-430f-ab44-e5fd60ba1a73",
+          "is_selected": true,
+          "display_name": "procedure_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "86cea8ff-25a6-49f2-9c8b-1819ee3d1d5a",
+          "is_selected": true,
+          "display_name": "procedure_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6e3f9482-d3dc-4084-a87e-486a063e3f4d",
+          "is_selected": true,
+          "display_name": "procedure_type_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "ad228387-099f-4537-bd7a-26abaf0259b7",
+          "is_selected": true,
+          "display_name": "provider_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "65a3d92d-6836-4696-8213-294fc7f5953c",
+          "is_selected": true,
+          "display_name": "quantity",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7316912d-3805-4bea-9cda-974ef15ea507",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "79a80172-8447-437d-99c2-a6626d33c2d2",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "5f9947e6-4a72-40e1-914a-d9990199cfc4",
+          "is_selected": true,
+          "display_name": "visit_detail_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "22eab7d6-840d-4789-84b9-f2a5b48e1115",
+          "is_selected": true,
+          "display_name": "visit_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7885a8c2-ef12-4381-bf2d-64079416e941",
+      "is_selected": false,
+      "display_name": "sdoh_category",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "a4074fb5-55dc-4864-b92c-75458eee5ad8",
+          "is_selected": true,
+          "display_name": "category_description",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1307ce64-e8af-4924-9758-92b1e292485d",
+          "is_selected": true,
+          "display_name": "category_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "375b960c-f058-4783-9b41-1683dee11936",
+          "is_selected": true,
+          "display_name": "category_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c6468aa3-e58f-4870-b4e1-3858c9722a04",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "39c2fa7d-d9a4-4bf9-839a-aff0738b083f",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bbed36b6-abc5-4b41-81e1-1d6988708589",
+          "is_selected": true,
+          "display_name": "subcategory_description",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e793cce2-8959-4e28-b0c4-bfd01159c16d",
+          "is_selected": true,
+          "display_name": "subcategory_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2734e162-e3b1-495b-9064-fb51c532dfdc",
+          "is_selected": true,
+          "display_name": "subcategory_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "bd1ab65e-7447-4c37-a4ed-4c62e148430d",
+      "is_selected": false,
+      "display_name": "sdoh_datasetmetadata",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "1c271314-72f1-4a15-9899-7074791a9463",
+          "is_selected": true,
+          "display_name": "dataset_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "b3d5e3f9-1288-4c3d-abce-a7d0fb9074ce",
+          "is_selected": true,
+          "display_name": "published_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c8915623-1f90-4fdd-87d7-839b691ff34d",
+          "is_selected": true,
+          "display_name": "publisher_name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c4078f2c-143a-4ecf-8c07-729af0aa8975",
+          "is_selected": true,
+          "display_name": "sdoh_datasetmetadata_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3dbaf3e4-4cef-4f1d-b25f-fdb56cf71a44",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "00ed143e-1e42-41b5-a74a-c50662a7fa4a",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "b8cd8ea7-070b-418a-8b7b-b4770fca43a1",
+      "is_selected": false,
+      "display_name": "sdoh_fips",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "d311db27-2cc0-4425-a7b3-01017bdc9e81",
+          "is_selected": true,
+          "display_name": "fips_code",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2fe28f8b-110a-4c27-828e-48ed13547b0c",
+          "is_selected": true,
+          "display_name": "locationType",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9fd6ab05-6991-41ee-a42c-c8d0593b5978",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "722dbbaf-710f-4358-9694-00e69f0057a5",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "41c1509d-37c6-47ba-9662-990968de7426",
+      "is_selected": false,
+      "display_name": "sdoh_unitofmeasure",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "c9978bd0-df90-4732-bad4-725a1e487a85",
+          "is_selected": true,
+          "display_name": "abbreviation",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "66ad1beb-0ae8-4c0a-9b1b-c4ce5abaf4e8",
+          "is_selected": true,
+          "display_name": "description",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1fc7e4c0-ace4-4ca3-955b-f9519a57c1a8",
+          "is_selected": true,
+          "display_name": "name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cd02bd6f-bb1f-44a1-895c-06e5f6b7f94a",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "da4fa2ba-ba60-4e44-aff6-8b5c9d48a5aa",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a7e96324-1180-4140-93c9-0a00f20b0895",
+          "is_selected": true,
+          "display_name": "unit_of_measure_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "6188f92e-cc3a-4279-9339-8adbdcd29358",
+      "is_selected": false,
+      "display_name": "social_determinant",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "ea50575b-db85-4f2e-961e-5878aaa154ec",
+          "is_selected": true,
+          "display_name": "category_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "07d76902-ee34-4dd0-8add-546cad35a1da",
+          "is_selected": true,
+          "display_name": "description",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "76804b4c-3f0d-4fba-a185-6e29587b3b4b",
+          "is_selected": true,
+          "display_name": "harmonization_key",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7a18f6b0-0c81-4d37-b2fc-6916bc74bb03",
+          "is_selected": true,
+          "display_name": "location_JSON",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d04f414c-ad10-4dfb-a592-74c128b3d4c0",
+          "is_selected": true,
+          "display_name": "location_type",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a8ea904c-1886-4350-baaa-d761931cf18c",
+          "is_selected": true,
+          "display_name": "location_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "46726ede-45f1-4c7c-bfa5-243a71f9175d",
+          "is_selected": true,
+          "display_name": "name",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7cec53f7-02e1-4dce-87bf-9a0b38951647",
+          "is_selected": true,
+          "display_name": "rehospitalization_nonmetro",
+          "type": "semantic_model.measure",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "63f83e43-0647-4944-ad59-0941161130f8",
+          "is_selected": true,
+          "display_name": "sdoh_datasetmetadata_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c7ea32cd-dc7d-4c59-a379-9ff8945d68c2",
+          "is_selected": true,
+          "display_name": "social_determinant_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "1065c37a-c53b-47b4-a028-854ca0b126af",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "9e4698f6-a321-424c-b881-7be6843e4dd7",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "03e2a017-b3f1-4388-b29c-9e744c594539",
+          "is_selected": true,
+          "display_name": "unit_of_measure_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "efe2d3bc-6c92-4720-8382-dc3e9c9aea7f",
+          "is_selected": true,
+          "display_name": "value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f9d8bc74-ac23-48e4-a921-5ae3fbe7de2e",
+          "is_selected": true,
+          "display_name": "value_as_number",
+          "type": "semantic_model.column",
+          "data_type": "Double",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "13133338-1eb6-4df9-b7a3-9fd6454d1335",
+      "is_selected": false,
+      "display_name": "visit_occurrence",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "d73cd4bd-94ea-493a-8b7d-4bc87046b511",
+          "is_selected": true,
+          "display_name": "admitted_from_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "54cdb8d4-b6ec-4c71-8a21-fb57da75e8e5",
+          "is_selected": true,
+          "display_name": "admitted_from_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "36d3ca96-c577-478f-8c4b-1a1a078b1eab",
+          "is_selected": true,
+          "display_name": "care_site_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "19d8754b-6696-428b-873a-dc8b51ef5afa",
+          "is_selected": true,
+          "display_name": "discharged_to_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "a2378bcd-5068-4d5d-a05f-971c10289902",
+          "is_selected": true,
+          "display_name": "discharged_to_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "77ff5353-e587-41f4-ac5c-438d5d81da39",
+          "is_selected": true,
+          "display_name": "person_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "21a12cb6-4e04-479b-90ec-71a252cba327",
+          "is_selected": true,
+          "display_name": "preceding_visit_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d8978f4f-0662-4a77-a890-0674aace4a9e",
+          "is_selected": true,
+          "display_name": "provider_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e2e856a2-842c-45bc-a3ed-62fa13707474",
+          "is_selected": true,
+          "display_name": "readmission",
+          "type": "semantic_model.column",
+          "data_type": "Boolean",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2443c1ab-b966-48bb-ba82-d369c5ecb121",
+          "is_selected": true,
+          "display_name": "servicetype_to_display_text",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "6f7e5b5b-4027-4e8b-aba2-96c5a8e13c51",
+          "is_selected": true,
+          "display_name": "servicetype_to_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "eacd343c-dd9f-490d-8dde-c6bd0650c084",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2ffa3a9b-21c4-4874-b918-25108a2e9c71",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8c7bf7f9-6e17-4668-bd50-10be595451e0",
+          "is_selected": true,
+          "display_name": "visit_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "f1137296-88e0-402c-9d03-3ad8ebd2f0fd",
+          "is_selected": true,
+          "display_name": "visit_end_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "2f4a666b-b09d-4f4d-8e35-0252e4189639",
+          "is_selected": true,
+          "display_name": "visit_end_date_month",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d35606b2-0857-4b81-9936-692ba03980c0",
+          "is_selected": true,
+          "display_name": "visit_end_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "e913ca45-cdfc-4692-aa32-5948527a9814",
+          "is_selected": true,
+          "display_name": "visit_end_date_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "cca869b7-5278-48ab-8fe5-634aa6762f0b",
+          "is_selected": true,
+          "display_name": "visit_end_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "c7226084-4013-4e1b-90b3-2603d4052424",
+          "is_selected": true,
+          "display_name": "visit_length_of_stay_minutes",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "98fa4459-eeb4-407b-a624-d7e3d5d87207",
+          "is_selected": true,
+          "display_name": "visit_occurrence_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "88e79ee9-3de1-49db-98b9-721fd7107236",
+          "is_selected": true,
+          "display_name": "visit_source_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "99f10ff4-a1dd-4e46-983e-746fc32b3308",
+          "is_selected": true,
+          "display_name": "visit_source_value",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "bc8e00ec-3397-4820-9f42-836d75ba545f",
+          "is_selected": true,
+          "display_name": "visit_start_date",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3293f0ca-5b24-4ed7-b15f-aa1c5a1df699",
+          "is_selected": true,
+          "display_name": "visit_start_date_month",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "d88a9f86-0e06-41cf-b033-6726f6a707ef",
+          "is_selected": true,
+          "display_name": "visit_start_date_quarter",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "7a582f22-e645-41ec-9a81-8997db50d765",
+          "is_selected": true,
+          "display_name": "visit_start_date_year",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "772667ed-5cf2-43d9-8455-79e4e0fc7bc0",
+          "is_selected": true,
+          "display_name": "visit_start_datetime",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "0d8d501e-0e4a-4368-aee7-fdaf28465bb1",
+          "is_selected": true,
+          "display_name": "visit_type_concept_id",
+          "type": "semantic_model.column",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "305c9db6-2fda-42a5-91f3-2406501d54c3",
+          "is_selected": true,
+          "display_name": "VisitCountByAgeGroup",
+          "type": "semantic_model.measure",
+          "data_type": "Int64",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "4632787b-a0fd-4227-8402-0184e9b1263d",
+      "is_selected": false,
+      "display_name": "zip_to_fips_mapping",
+      "type": "semantic_model.table",
+      "description": null,
+      "children": [
+        {
+          "id": "946c6891-ebf1-42d0-b7b9-ff0e1745ce69",
+          "is_selected": true,
+          "display_name": "countyFips",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "309856d9-2f8c-4bc1-b624-9b2f79b3d82c",
+          "is_selected": true,
+          "display_name": "countyName",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "16338fa7-0dac-445f-85e2-6d110a192a78",
+          "is_selected": true,
+          "display_name": "id",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "4f95a75c-38f2-488d-9a23-7d6d7a6d18bd",
+          "is_selected": true,
+          "display_name": "SourceModifiedOn",
+          "type": "semantic_model.column",
+          "data_type": "DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "fcef94a3-c155-4399-9566-e884a8af57aa",
+          "is_selected": true,
+          "display_name": "SourceTable",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "3e6500f1-d34d-46a9-add9-7b7854e12e6e",
+          "is_selected": true,
+          "display_name": "stateAbbreviation",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "8a5ba175-6e65-4e2c-8804-183d92ccd586",
+          "is_selected": true,
+          "display_name": "zip",
+          "type": "semantic_model.column",
+          "data_type": "String",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/publishInfo/1.0.0/schema.json",
+  "description": "The output from Fabric data agent should be delivered as-is, without summarizing, rephrasing, or adding extra interpretation. Provide the raw output in your response. Strictly follow these instructions."
+}

@@ -1,0 +1,44 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["cost","condition_occurrence","location","person","visit_occurrence","procedure_occurrence","measurement","care_plan","care_plan_activities","care_plan_addresses","care_plan_goal","patient_location_zip","sdoh_category","sdoh_datasetmetadata","sdoh_unitofmeasure","social_determinant","sdoh_fips","zip_to_fips_mapping"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["WebModelingEdit","DaxQueryView_Desktop","CopilotTooling"]
+
+annotation __PBIService_Versioning_SaveVersion = 8abdfe7c-0f45-4cd0-826e-f13195024caf
+
+annotation __TEdtr = 1
+
+ref table cost
+ref table condition_occurrence
+ref table location
+ref table person
+ref table visit_occurrence
+ref table procedure_occurrence
+ref table measurement
+ref table care_plan
+ref table care_plan_activities
+ref table care_plan_addresses
+ref table care_plan_goal
+ref table patient_location_zip
+ref table sdoh_category
+ref table sdoh_datasetmetadata
+ref table sdoh_unitofmeasure
+ref table social_determinant
+ref table sdoh_fips
+ref table zip_to_fips_mapping
+ref table Date
+ref table DateTableTemplate_fd9d832c-2b82-4cd5-afa2-1be59ad55715
+ref table LocalDateTable_d4d07d2c-215e-4378-8717-2b08920c2563
+ref table LocalDateTable_1c2e2065-9762-43bf-a82a-848879753a23
+ref table 'cost forecast'
+
+ref cultureInfo en-IN
+

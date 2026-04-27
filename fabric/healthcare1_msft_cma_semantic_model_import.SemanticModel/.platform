@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "healthcare1_msft_cma_semantic_model_import"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a5f579d3-0563-a7a2-4da5-cb6386f1be19"
+  }
+}
