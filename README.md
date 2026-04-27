@@ -18,6 +18,7 @@ You can specify the MCP server in the vite.config.js and app.jsx files.  Alterna
 - Node.js 20+ (recommended for stable `fetch` + `crypto` support in tooling)
 - Azure CLI installed locally
 - Your Microsoft account signed in through Azure CLI
+- The semantic model uses the Healthcare Data Solutions accelerator found here https://learn.microsoft.com/en-us/industry/healthcare/healthcare-data-solutions/overview
 
 ## Sign in with your Microsoft credentials
 
